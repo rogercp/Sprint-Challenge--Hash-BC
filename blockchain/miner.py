@@ -7,7 +7,7 @@ from uuid import uuid4
 
 from timeit import default_timer as timer
 
-import random
+from random import *
 
 
 def proof_of_work(last_proof):
@@ -43,8 +43,8 @@ def valid_proof(last_hash, proof):
     IE:  last_hash: ...AE9123456, new hash 123456888...
     """
 
-    old_hash = hashlib.sha256(f'{last_proof}'.encode()).hexadigest()[-6:]
-    new_hash = hashlib.sha256(f'{proof'.encode()).hexadigest()[:6]
+    old_hash = hashlib.sha256(f'{last_hash}'.encode()).hexdigest()[-6:]
+    new_hash = hashlib.sha256(f'{proof}'.encode()).hexdigest()[:6]
     return old_hash == new_hash
  
 
