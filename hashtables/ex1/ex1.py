@@ -12,7 +12,7 @@ def get_indices_of_item_weights(weights, length, limit):
         hash_table_insert(ht,j,i)
     
     for i,j in enumerate(weights):
-        diff = limit - i
+        diff = limit - j
         if hash_table_retrieve(ht,diff) is not None:
             diff_index = hash_table_retrieve(ht,diff)
 
