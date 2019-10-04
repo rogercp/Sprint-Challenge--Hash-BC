@@ -39,8 +39,10 @@ def valid_proof(last_hash, proof):
     IE:  last_hash: ...AE9123456, new hash 123456888...
     """
 
-    # TODO: Your code here!
-    pass
+    old_hash = hashlib.sha256(f'{last_proof}'.encode()).hexadigest()[-6:]
+    new_hash = hashlib.sha256(f'{proof'.encode()).hexadigest()[:6]
+    return old_hash == new_hash
+ 
 
 
 if __name__ == '__main__':
